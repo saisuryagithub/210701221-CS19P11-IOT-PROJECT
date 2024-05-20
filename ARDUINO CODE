@@ -1,0 +1,14 @@
+#define IR 8         //defining port for sensor
+#define LED 13       //defining port for output
+
+void setup() {
+pinMode(IR,INPUT);   //configuration of device as input
+pinMode(LED,OUTPUT); //configuration of device as output
+}
+
+void loop() {
+if (digitalRead(IR)==HIGH)  //recieving and reading of input
+{digitalWrite(LED,HIGH);}   //sending output to switch the bulb on
+  else
+   {digitalWrite(LED,LOW);} // else condition for switching off
+}
